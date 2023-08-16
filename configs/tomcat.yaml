@@ -1,0 +1,10 @@
+---
+- name: instal tomcat9 and tomcat9-admin
+  hosts: test
+  become: true
+  tasks:
+    - name: install tomcat9
+      apt: 
+        name: ["tomcat9", "tomcat9-admin"]
+        state: present
+        update_cache: yes
